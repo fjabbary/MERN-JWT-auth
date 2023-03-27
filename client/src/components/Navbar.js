@@ -27,12 +27,13 @@ function Navbar() {
         <div className="navbar">
             <nav>
                 <div className="logo">
-                    <Link to="/">Recipe App</Link>
+
+                    {cookies.access_token ? <Link to="/">Recipe App</Link> : <p>Recipe App</p>}
                 </div>
                 <ul>
-                    <li>
+                    {cookies.access_token && <li>
                         <Link to="/create-recipe">Create Recipe</Link>
-                    </li>
+                    </li>}
                     {!cookies.access_token ?
                         <><li>
                             <Link to="/login">Login</Link>
