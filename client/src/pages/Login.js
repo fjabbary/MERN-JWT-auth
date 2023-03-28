@@ -19,7 +19,6 @@ function Login() {
 
         try {
             const response = await Axios.post('http://localhost:3001/auth/login', { username, password })
-            console.log(response.data)
             const { token, userId } = response.data
 
             localStorage.setItem("userId", userId)

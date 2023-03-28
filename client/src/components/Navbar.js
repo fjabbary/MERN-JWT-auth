@@ -10,7 +10,7 @@ function Navbar() {
 
     const [cookies, setCookies] = useCookies(["access_token"])
     const [loading, setLoading] = useState(false)
-    console.log(cookies)
+    // console.log(cookies)
 
     const logout = () => {
         localStorage.removeItem("userId")

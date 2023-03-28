@@ -179,3 +179,20 @@ img.loader {
   background-color:rgb(68, 68, 234)
 }
 
+.recipe {
+  padding: 20px;
+  border: 1px solid #000;
+  
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.recipe img {
+  width: 100%;
+}
+
+.recipes {
+  text-align: left;
+  width: 33%;
+  margin: auto;
+}

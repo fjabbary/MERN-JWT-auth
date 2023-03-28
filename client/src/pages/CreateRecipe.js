@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import Axios from 'axios';
 import { userId } from '../userId';
+import { useNavigate } from 'react-router-dom'
 
 function CreateRecipe() {
+
+    const navigate = useNavigate();
 
     const [count, setCount] = useState(1)
     const [name, setName] = useState("")
@@ -12,6 +15,7 @@ function CreateRecipe() {
     const [cookingTime, setCookingTime] = useState(0)
 
     const increment = () => {
+        // Increase up to 10 ingredients
         (count <= 10) && setCount(count + 1)
         setIngredient([...ingredients, ""])
     }
@@ -39,6 +43,8 @@ function CreateRecipe() {
         setInstruction("")
         setImgUrl("")
         setCookingTime(0)
+        navigate("/")
+
     }
 
     return (
