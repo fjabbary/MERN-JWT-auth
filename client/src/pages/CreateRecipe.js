@@ -74,7 +74,7 @@ function CreateRecipe() {
                     <label htmlFor="cooking-time">Cooking time (minutes):</label><br />
                     <input type="number" name="cookingTime" value={cookingTime} onChange={e => setCookingTime(e.target.value)} />
                 </div>
-                <button type="submit" className="btn btn-primary">Create Recipe</button>
+                <button type="submit" className="btn btn-primary-add">Create Recipe</button>
             </form>
         </div>
     )

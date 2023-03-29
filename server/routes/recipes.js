@@ -1,33 +1,32 @@
 import express from 'express';
 import { RecipeModel } from '../models/recipes.js';
+import { UserModel } from '../models/users.js';
 const router = express.Router();
 
 
 router.get("/", async (req, res) => {
     const response = await RecipeModel.find({});
-    console.log(response);
     res.send(response)
 })
 
 router.post("/", async (req, res) => {
-    console.log(req.body);
     const newRecipe = new RecipeModel(req.body);
     await newRecipe.save();
     res.send(newRecipe);
 })
 
 router.put("/", async (req, res) => {
-    try {
-        const recipe = await RecipeModel.findById(req.body.recipeID)
-        const user = await UserModel.findById(req.body.userID)
-        user.savedRecipes.push(recipe);
 
-        await user.save();
-        res.json({ saveRecipes: user.savedRecipes })
+    const recipe = await RecipeModel.findById(req.body.recipeId)
+    const user = await UserModel.findById(req.body.userId)
+    user.savedRecipes.push(recipe);
 
-    } catch (error) {
-        res.json(err)
-    }
+    console.log(recipe);
+    console.log(user);
+
+    await user.save();
+    res.json({ saveRecipes: user.savedRecipes })
+
 })
 
 router.get("/savedRecipes/ids", async (req, res) => {

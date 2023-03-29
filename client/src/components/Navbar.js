@@ -35,15 +35,18 @@ function Navbar() {
                         <Link to="/create-recipe">Create Recipe</Link>
                     </li>}
                     {!cookies.access_token ?
-                        <><li>
-                            <Link to="/login">Login</Link>
-                        </li>
+                        <>
+                            <li>
+                                <Link to="/login">Login</Link>
+                            </li>
                             <li>
                                 <Link to="/register">Register</Link>
                             </li></> :
-                        <li>
-                            <Link onClick={logout}>Logout</Link>
-                        </li>}
+                        <>
+                            <li>
+                                <Link onClick={logout}>Logout</Link>
+                            </li>
+                        </>}
                 </ul>
             </nav>
             {loading && <div className="img-container"><img className="logout-loader" src={loader} alt="loader" /></div>}

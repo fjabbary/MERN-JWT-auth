@@ -46,11 +46,11 @@ body, html {
 }
 
 .register {
-  background-color: rgb(208, 219, 255);
+  background-color: rgb(245, 234, 221);
 }
 
 .login {
-  background-color: rgb(187, 212, 204);
+  background-color: rgb(220, 250, 236);
 }
 
 .register .form-group, .login .form-group {
@@ -165,7 +165,7 @@ img.loader {
   border: 2px solid #000;
 }
 
-.btn-primary {
+.btn-primary-add {
   background-color: rgb(88, 88, 242);
   color: #fff;
   padding: 10px 20px;
@@ -175,14 +175,13 @@ img.loader {
   cursor: pointer;
 }
 
-.btn-primary:hover {
+.btn-primary-add:hover {
   background-color:rgb(68, 68, 234)
 }
 
 .recipe {
   padding: 20px;
   border: 1px solid #000;
-  
   margin-bottom: 40px;
   text-align: left;
 }
@@ -193,6 +192,36 @@ img.loader {
 
 .recipes {
   text-align: left;
-  width: 33%;
+  width:40%;
   margin: auto;
+}
+
+ul {
+   list-style-image: url('../check.png');;
+}
+
+.cooking-time {
+  float: right;
+}
+
+.d-flex {
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+  background-color: #eee;
+  padding: 0 20px;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: green;
+  border-radius: 3px;
+  padding: 10px 20px;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: rgb(0, 97, 0);
+  cursor: pointer;
 }
